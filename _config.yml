@@ -1,0 +1,54 @@
+title: "Jean-Elie Pierre, Ph.D."
+description: "AI/ML systems engineer building reliable engineering automation, autonomy, and embedded intelligence for high-consequence systems."
+url: "https://jeaneliepierre.com"
+baseurl: ""
+lang: "en-US"
+timezone: "America/New_York"
+
+name: "Jean-Elie Pierre, Ph.D."
+role: "AI/ML Systems Engineer | Engineering Automation, Autonomy & Embedded Intelligence"
+email: "email@jeaneliepierre.com"
+linkedin_username: "jean-elie-pierre"
+github_username: "jepierre"
+google_scholar: "https://scholar.google.com/citations?user=l-t-5pgAAAAJ&hl=en"
+
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  math_engine_opts:
+    preview: true
+    preview_as_code: true
+highlighter: rouge
+permalink: /writing/:year/:month/:day/:title/
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: project
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - vendor
+  - _templates
+
+include: ['_pages']
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap

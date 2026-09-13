@@ -1,0 +1,21 @@
+{% assign p = include.project %}
+<article class="project-card">
+  <a class="project-card-link" href="{{ p.url | relative_url }}">
+    <div class="project-card-top">
+      <p class="eyebrow">{{ p.domain | upcase }}</p>
+      <span aria-hidden="true">↗</span>
+    </div>
+    <h3>{{ p.title }}</h3>
+    <p>{{ p.summary }}</p>
+    {% if p.metrics %}
+    <div class="project-card-metrics">
+      {% for metric in p.metrics limit:2 %}
+      <span><strong>{{ metric.value }}</strong> {{ metric.label }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+    <div class="tag-row compact">
+      {% for tag in p.tags limit:4 %}<span class="tag">{{ tag }}</span>{% endfor %}
+    </div>
+  </a>
+</article>

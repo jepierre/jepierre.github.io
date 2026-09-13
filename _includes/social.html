@@ -1,0 +1,6 @@
+<div class="header-icons">
+  <a aria-label="Send email" href="mailto:{{ site.email }}"><i class="icon fa fa-envelope fa-lg" aria-hidden="true"></i></a>
+  <a aria-label="My LinkedIn" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/{{ site.linkedin_username }}/"><i class="icon fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+  <a aria-label="My GitHub" target="_blank" rel="noopener noreferrer" href="https://github.com/{{ site.github_username }}"><i class="icon fa fa-github-alt fa-lg" aria-hidden="true"></i></a>
+  {% if site.google_scholar %}<a aria-label="My Google Scholar" target="_blank" rel="noopener noreferrer" href="{{ site.google_scholar }}"><i class="icon fa fa-graduation-cap fa-lg" aria-hidden="true"></i></a>{% endif %}
+</div>
